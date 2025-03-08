@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Bem-vindo ao Catálogo Virtual</h1>
+            
+        </section>
+
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="img/almochaveiro.jpg" alt="Almochaveiro 7x7">
+                    <h3>Almochaveiro 7x7</h3>
+                    <p>Preço: R$ 1,50 por unidade</p>
+                    <button 
+            class="whatsapp-button" 
+            data-produto="Almochaveiro 7x7">
+            Saiba mais
+        </button>
+                </div>
+                <div class="card">
+                    <img src="img/sacochila.jpg" alt="Lembrancinha">
+                    <h3>Sacochila 29x21</h3>
+                    <p>Preço: R$ 6,50 por unidade</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="img/banner.jpg" alt="Banner">
+                    <h3>Sacola</h3>
+                    <p>Preço: R$ 6,00 por unidade</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="img/convite.jpg" alt="Convite">
+                    <h3>Eco-Bag 29x21</h3>
+                    <p>Preço: R$ 5,00 por unidade</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="img/canecas.jpg" alt="Convite">
+                    <h3>Caneca Personalizada</h3>
+                    <p>Preço: R$ 29,90 por unidade</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="img/camisa.jpg" alt="Convite">
+                    <h3>Camisa Personalizada Branca</h3>
+                    <p>Preço: R$ 24,90 por unidade</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="img/camisa2.jpg" alt="Convite">
+                    <h3>Camisa Personalizada Colorida</h3>
+                    <p>Preço: R$ 29,90 por unidade</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="img/convite.jpg" alt="Convite">
+                    <h3>Eco-Bag x</h3>
+                    <p>Preço: R$ 5,00 por unidade</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="img/convite.jpg" alt="Convite">
+                    <h3>Sacola x</h3>
+                    <p>Preço: R$ 5,00 por unidade</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="img/convite.jpg" alt="Convite">
+                    <h3>Sacochila x</h3>
+                    <p>Preço: R$ 5,00 por unidade</p>
+                    <button>Comprar</button>
+                </div>
+                <!-- Adicione mais cards aqui -->
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <div class="whatsapp-container">
+        <p>&copy; 2025 Catálogo Virtual - Todos os direitos reservados.</p>
+        <a href="https://wa.me/5521991064864" target="_blank" class="whatsapp-link">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+            Fale com Márcia 
+        </a>
+        <!-- Segundo número do WhatsApp -->
+    <a href="https://wa.me/5521970721544" target="_blank" class="whatsapp-link">
+        <img src="img/whatsapp-icon.png" alt="WhatsApp 2" class="whatsapp-icon">
+        Fale com Gabriella
+    </a>
+</div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Número do WhatsApp no formato internacional (substitua pelo seu número)
+            const numeroWhatsApp = "5521970721544";
+    
+            // Seleciona todos os botões com a classe 'whatsapp-button'
+            const botõesWhatsApp = document.querySelectorAll(".whatsapp-button");
+    
+            // Adiciona um evento de clique em cada botão
+            botõesWhatsApp.forEach(botao => {
+                botao.addEventListener("click", () => {
+                    // Obtém o nome do produto do atributo 'data-produto'
+                    const produto = botao.getAttribute("data-produto");
+                    
+                    // Cria a mensagem personalizada
+                    const mensagem = `Olá, gostaria de saber mais sobre o produto: ${encodeURIComponent(produto)}`;
+    
+                    // Monta o link do WhatsApp
+                    const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+    
+                    // Redireciona o usuário para o WhatsApp
+                    window.open(linkWhatsApp, "_blank");
+                });
+            });
+        });
+    </script>
+      
+
+    
+</body>
+</html>
